@@ -60,10 +60,9 @@
 
             uploadRequest = [AWSS3TransferManagerUploadRequest new];
 
-            NSString *keyString = [NSString stringWithFormat:@"%@%@.%@",
+            NSString *keyString = [NSString stringWithFormat:@"%@%@",
                                    args[@"destinationFilePath"],
-                                   args[@"destinationFileNamePrefix"],
-                                   [args[@"sourceFile"] pathExtension]];
+                                   args[@"destinationFileNamePrefix"]];
 
             uploadRequest.bucket = args[@"bucketName"];
             uploadRequest.key = keyString;
